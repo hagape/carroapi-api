@@ -19,9 +19,20 @@ class CarroController{
  }
 
     @PostMapping
-
     fun salvar (@RequestBody carro: Carro) {
         carroService.salvar(carro)
     }
 
+	 @DeleteMapping
+    fun excluir(@RequestBody carro: Carro) {
+        carroService.excluir(carro)
+    }
+
+    @PutMapping
+    fun atualizar(@RequestBody carro: Carro) {
+        carroService.atualizar(carro)
+    }
+	
+	
+	
 }
